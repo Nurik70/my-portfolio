@@ -1,0 +1,63 @@
+.main-achivement {
+    display: flex;
+    flex-direction: column;
+    /* Устанавливает вертикальное направление для рядов */
+    align-items: center;
+    /* Центрирует ряды по горизонтали */
+    gap: 20px;
+    /* Промежуток между рядами */
+}
+
+.word-achi-top 
+{
+  color: #34495e;
+}
+.row {
+    display: flex;
+    justify-content: center;
+    /* Центрирует блоки по горизонтали внутри ряда */
+    gap: 20px;
+    /* Промежуток между блоками в ряду */
+}
+
+.row h3 {
+    color: #34495e;
+}
+
+.information-achi {
+    width: 300px;
+    /* Фиксированная ширина для единообразия */
+    padding: 20px;
+    background-color: #f5f5f5;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    /* Центрирование текста */
+    transition: box-shadow 0.3s ease;
+}
+
+.information-achi:hover
+{
+    box-shadow: 6px 7px 5px 4px rgba(0, 0, 0, 0.1);
+}
+.img-cross-foto {
+    width: 190px;
+}
+
+.button-link-prog 
+{
+    display: inline-block;
+    padding: 5px 10px; /* Увеличиваем отступ для кнопки */
+    background-color: #34495e; /* Цвет кнопки */
+    color: white; /* Цвет текста */
+    text-align: center; /* Центрируем текст внутри кнопки */
+    text-decoration: none; /* Убираем подчеркивание */
+    border-radius: 5px; /* Скругляем углы кнопки */
+    font-size: 1.0rem; /* Увеличиваем размер текста кнопки */
+    transition: background-color 0.2s; /* Плавный переход при наведении */
+    margin-top: 5px;
+}
+
+.button-link-prog:hover {
+    background-color: #386ba2; /* Темнее цвет кнопки при наведении */
+}

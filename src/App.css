@@ -1,3 +1,14 @@
+body {
+  margin: 0; /* Убираем отступы по умолчанию */
+  background-image: url('https://images.wallpaperscraft.ru/image/single/belyj_fon_vmiatiny_69592_1920x1080.jpg'); /* Ссылка на изображение фона */
+  background-size: cover; /* Изображение будет покрывать весь фон */
+  background-position: center; /* Центрируем изображение */
+  background-repeat: no-repeat; /* Не повторять изображение */
+  min-height: 100vh; /* Устанавливаем минимальную высоту для фона */
+  background-attachment: fixed; /* Фон остаётся неподвижным */
+}
+
+
 .App {
   text-align: center;
 }
@@ -36,3 +47,7 @@
     transform: rotate(360deg);
   }
 }
+
+
+
+

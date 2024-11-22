@@ -1,0 +1,46 @@
+/* Navbar.css */
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #28425c;
+    padding: 15px 30px;
+    color: white;
+}
+
+.img-my-foto-nav {
+    width: 45px;
+    height: 45px;
+    border-radius: 35px;
+}
+.photo-and-portfolio{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+h1 {
+    font-size: 1.8em;
+}
+
+.nav-links {
+    display: flex;
+    gap: 30px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.1em;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #429cfcbc; /* Золотой цвет при наведении */
+}
+
+.nav-links a.active {
+    font-weight: bold;
+    border-bottom: 2px solid #ffd700; /* Подчеркнутый активный элемент */
+}

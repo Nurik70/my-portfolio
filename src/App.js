@@ -1,25 +1,31 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { Route, Routes } from "react-router-dom";
+import { LanguageProvider } from './LanguageContext'; // Импортируем LanguageProvider
+import Navbar from "./Componetns/Navbar";
+import Home from "./Pages/Home";
+import About from "./Pages/About";
+import Progects from "./Pages/Progects";
+import Contacts from "./Pages/Contacts";
+import Achivement from "./Pages/Achivement";
+import Footer from "./Componetns/Footer";
+import "./App.css";
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <LanguageProvider> {/* Оборачиваем все в LanguageProvider */}
+      <Navbar />
+      <div className="main-content">
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/progects" element={<Progects />} />
+          <Route path="/achivement" element={<Achivement />} />
+          <Route path="/contacts" element={<Contacts />} />
+        </Routes>
+      </div>
+      <Footer />
+    </LanguageProvider>
   );
-}
+};
 
 export default App;

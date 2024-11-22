@@ -1,0 +1,99 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  background-image: url('https://images.wallpaperscraft.ru/image/single/belyj_fon_vmiatiny_69592_1920x1080.jpg'); /* Ссылка на изображение фона */
+  background-size: cover; /* Изображение будет покрывать весь фон */
+  background-position: center; /* Центрируем изображение */
+  background-repeat: no-repeat; /* Не повторять изображение */
+  background-attachment: fixed; /* Фон остаётся неподвижным */
+  min-height: 90vh; /* Устанавливаем минимальную высоту, чтобы покрыть всю страницу */
+  color: #2c3e50; /* Темно-синий цвет для текста */
+}
+
+.about-header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.about-header h2 {
+  font-size: 2em;
+  font-weight: bold;
+  margin: 0;
+  color: #34495e; /* Темно-серый цвет для заголовка */
+}
+
+.about-header p {
+  color: #7f8c8d; /* Серый цвет для описания */
+  font-size: 1.1em;
+  margin-top: 10px;
+}
+
+.about-content {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 800px;
+}
+
+.get-to-know {
+  width: 60%;
+}
+
+.get-to-know h3 {
+  font-size: 1.5em;
+  font-weight: bold;
+  margin-bottom: 15px;
+  color: #34495e; /* Темно-серый цвет для заголовка секции */
+}
+
+.get-to-know p {
+  font-size: 1em;
+  color: #2c3e50; /* Темно-синий цвет для текста */
+  margin-bottom: 15px;
+}
+
+.get-to-know a {
+  color: #2980b9; /* Синий цвет для ссылок */
+  text-decoration: none;
+}
+
+.get-to-know a:hover {
+  text-decoration: underline;
+  color: #3498db; /* Цвет ссылки при наведении */
+}
+
+.skills-section {
+  width: 35%;
+  text-align: left;
+}
+
+.skills-section h3 {
+  font-size: 1.5em;
+  font-weight: bold;
+  margin-bottom: 15px;
+  color: #34495e; /* Темно-серый цвет для заголовка секции */
+}
+
+.skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.skill {
+  padding: 10px 15px;
+  background-color: rgba(255, 255, 255, 0.9); /* Почти белый фон для навыков */
+  border-radius: 5px;
+  font-size: 0.9em;
+  font-weight: bold;
+  color: #2c3e50; /* Темно-синий цвет для текста */
+  text-align: center;
+  min-width: 100px;
+  transition: box-shadow 0.3s ease;
+}
+
+.skill:hover {
+  box-shadow: 4px 5px 2px 2px rgba(0, 0, 0, 0.1);
+}
