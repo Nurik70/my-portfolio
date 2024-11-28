@@ -1,13 +1,14 @@
-/* Home.css */
-
+/* Основной контейнер */
 .container {
     display: flex;
     justify-content: center; /* Центрируем по горизонтали */
     align-items: center; /* Центрируем по вертикали */
-    height: 65vh; /* Занимаем полную высоту окна */
+    height: 65vh; /* Высота секции */
     text-align: center; /* Выравнивание текста по центру */
-} 
+    padding: 20px; /* Отступы для небольших экранов */
+}
 
+/* Кнопка */
 .button-link {
     display: inline-block;
     padding: 15px 30px; /* Увеличиваем отступ для кнопки */
@@ -24,29 +25,20 @@
     background-color: #386ba2; /* Темнее цвет кнопки при наведении */
 }
 
-/* 
-.img-my-foto {
-    width: 180px;
-    border-radius: 15px;
-    margin-bottom: 10px;
-} */
-
-.big-home-text
-{
-    font-size: 3.3rem; /* Увеличиваем размер заголовка */
+/* Заголовок */
+.big-home-text {
+    font-size: 3.3rem; /* Размер заголовка */
     margin-bottom: 20px; /* Отступ снизу */
     font-weight: 800;
     max-width: 1000px;
 }
 
-.small-home-text 
-{
+.small-home-text {
     font-size: 1.3rem;
-    margin-bottom: 20px
+    margin-bottom: 20px;
 }
 
-
-
+/* Переключатель языка */
 .language-toggle {
     margin-top: 20px;
     padding: 10px 15px;
@@ -56,9 +48,45 @@
     color: white;
     border: none;
     border-radius: 5px;
-  }
-  
-  .language-toggle:hover {
+}
+
+.language-toggle:hover {
     background-color: #0056b3;
-  }
-  
+}
+
+/* Адаптивный дизайн для планшетов */
+@media (max-width: 768px) {
+    .big-home-text {
+        font-size: 2.5rem; /* Уменьшаем размер заголовка */
+    }
+
+    .small-home-text {
+        font-size: 1.1rem; /* Уменьшаем текст описания */
+    }
+
+    .button-link {
+        font-size: 1rem; /* Уменьшаем размер текста в кнопке */
+        padding: 10px 20px; /* Уменьшаем отступы */
+    }
+}
+
+/* Адаптивный дизайн для телефонов */
+@media (max-width: 480px) {
+    .big-home-text {
+        font-size: 2rem; /* Ещё больше уменьшаем заголовок */
+    }
+
+    .small-home-text {
+        font-size: 1rem; /* Текст становится меньше */
+    }
+
+    .button-link {
+        font-size: 0.9rem; /* Размер текста в кнопке уменьшается */
+        padding: 8px 15px; /* Отступы уменьшаются */
+    }
+
+    .language-toggle {
+        font-size: 0.8rem; /* Уменьшаем текст переключателя языка */
+        padding: 8px 12px;
+    }
+}

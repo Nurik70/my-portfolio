@@ -3,13 +3,13 @@
   flex-direction: column;
   align-items: center;
   padding: 20px;
-  background-image: url('https://images.wallpaperscraft.ru/image/single/belyj_fon_vmiatiny_69592_1920x1080.jpg'); /* Ссылка на изображение фона */
-  background-size: cover; /* Изображение будет покрывать весь фон */
-  background-position: center; /* Центрируем изображение */
-  background-repeat: no-repeat; /* Не повторять изображение */
-  background-attachment: fixed; /* Фон остаётся неподвижным */
-  min-height: 90vh; /* Устанавливаем минимальную высоту, чтобы покрыть всю страницу */
-  color: #2c3e50; /* Темно-синий цвет для текста */
+  background-image: url('https://images.wallpaperscraft.ru/image/single/belyj_fon_vmiatiny_69592_1920x1080.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  min-height: 90vh;
+  color: #2c3e50;
 }
 
 .about-header {
@@ -21,11 +21,11 @@
   font-size: 2em;
   font-weight: bold;
   margin: 0;
-  color: #34495e; /* Темно-серый цвет для заголовка */
+  color: #34495e;
 }
 
 .about-header p {
-  color: #7f8c8d; /* Серый цвет для описания */
+  color: #7f8c8d;
   font-size: 1.1em;
   margin-top: 10px;
 }
@@ -35,6 +35,7 @@
   justify-content: space-between;
   width: 100%;
   max-width: 800px;
+  gap: 20px;
 }
 
 .get-to-know {
@@ -45,23 +46,23 @@
   font-size: 1.5em;
   font-weight: bold;
   margin-bottom: 15px;
-  color: #34495e; /* Темно-серый цвет для заголовка секции */
+  color: #34495e;
 }
 
 .get-to-know p {
   font-size: 1em;
-  color: #2c3e50; /* Темно-синий цвет для текста */
+  color: #2c3e50;
   margin-bottom: 15px;
 }
 
 .get-to-know a {
-  color: #2980b9; /* Синий цвет для ссылок */
+  color: #2980b9;
   text-decoration: none;
 }
 
 .get-to-know a:hover {
   text-decoration: underline;
-  color: #3498db; /* Цвет ссылки при наведении */
+  color: #3498db;
 }
 
 .skills-section {
@@ -73,7 +74,7 @@
   font-size: 1.5em;
   font-weight: bold;
   margin-bottom: 15px;
-  color: #34495e; /* Темно-серый цвет для заголовка секции */
+  color: #34495e;
 }
 
 .skills {
@@ -84,11 +85,11 @@
 
 .skill {
   padding: 10px 15px;
-  background-color: rgba(255, 255, 255, 0.9); /* Почти белый фон для навыков */
+  background-color: rgba(255, 255, 255, 0.9);
   border-radius: 5px;
   font-size: 0.9em;
   font-weight: bold;
-  color: #2c3e50; /* Темно-синий цвет для текста */
+  color: #2c3e50;
   text-align: center;
   min-width: 100px;
   transition: box-shadow 0.3s ease;
@@ -96,4 +97,56 @@
 
 .skill:hover {
   box-shadow: 4px 5px 2px 2px rgba(0, 0, 0, 0.1);
+}
+
+/* Адаптивность для планшетов */
+@media (max-width: 768px) {
+  .about-content {
+    flex-direction: column; /* Секции располагаются друг под другом */
+    align-items: center;
+  }
+
+  .get-to-know,
+  .skills-section {
+    width: 100%; /* Секции занимают всю ширину */
+    text-align: center; /* Центрируем текст */
+  }
+
+  .skills {
+    justify-content: center; /* Центрируем блоки навыков */
+  }
+
+  .get-to-know h3,
+  .skills-section h3 {
+    font-size: 1.3em; /* Уменьшаем размер заголовков */
+  }
+}
+
+/* Адаптивность для телефонов */
+@media (max-width: 480px) {
+  .container {
+    padding: 15px; /* Уменьшаем отступы */
+  }
+
+  .about-header h2 {
+    font-size: 1.5em; /* Уменьшаем размер заголовка */
+  }
+
+  .about-header p {
+    font-size: 1em; /* Уменьшаем размер описания */
+  }
+
+  .skill {
+    min-width: 80px; /* Уменьшаем ширину карточек навыков */
+    font-size: 0.8em; /* Уменьшаем размер текста навыков */
+  }
+
+  .get-to-know h3,
+  .skills-section h3 {
+    font-size: 1.2em; /* Ещё меньше размер заголовков */
+  }
+
+  .skills {
+    gap: 8px; /* Уменьшаем расстояние между карточками навыков */
+  }
 }

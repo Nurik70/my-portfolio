@@ -34,6 +34,10 @@ const About = () => {
           <p>
             I'm a <strong>Frontend Focused Web Developer</strong> building and
             managing the Front-end of Websites and Web Applications.
+            I'm a <strong>Frontend Focused Web Developer</strong> building and
+            managing the Front-end of Websites and Web Applications.
+            I'm a <strong>Frontend Focused Web Developer</strong> building and
+            managing the Front-end of Websites and Web Applications.
           </p>
         </div>
         <div className="skills-section">

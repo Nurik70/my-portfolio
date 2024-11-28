@@ -1,0 +1,83 @@
+/* Контейнер для карточек */
+.projects-container {
+    display: flex; /* Включение Flexbox */
+    flex-wrap: wrap; /* Перенос на следующий ряд */
+    justify-content: center; /* Центрирование по горизонтали */
+    align-content: center; /* Центрирование по вертикали */
+    height: 100vh; /* Высота контейнера — вся высота экрана */
+    width: 100vw; /* Ширина контейнера — вся ширина экрана */
+    gap: 30px; /* Отступы между карточками */
+    box-sizing: border-box; /* Учет padding и border */
+  }
+  
+  /* Карточки */
+  .project-card {
+    width: 300px; /* Фиксированная ширина карточки */
+    height: 300px; /* Фиксированная высота карточки */
+    background-color: #f0f0f0;
+    border: 2px solid #ddd;
+    border-radius: 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .project-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Заголовок карточки */
+  .project-card h3 {
+    margin: 0 0 10px;
+    font-size: 1.5em;
+  }
+  
+  /* Описание карточки */
+  .project-card p {
+    color: #555;
+    font-size: 1em;
+  }
+  
+  /* Адаптивность */
+  @media (max-width: 1024px) {
+    .project-card {
+      width: 250px; /* Уменьшаем размер карточек */
+      height: 250px;
+    }
+  
+    .projects-container {
+      gap: 20px; /* Уменьшаем расстояние между карточками */
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .project-card {
+      width: 200px; /* Ещё меньше карточки */
+      height: 200px;
+    }
+  
+    .projects-container {
+      flex-wrap: wrap; /* Убедимся, что карточки переходят на следующий ряд */
+      gap: 15px; /* Уменьшаем расстояние между карточками */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .project-card {
+      width: 100%; /* Карточки занимают всю ширину */
+      height: auto; /* Высота будет зависеть от содержимого */
+      padding: 20px; /* Добавляем внутренние отступы */
+    }
+  
+    .projects-container {
+      height: auto; /* Отменяем фиксированную высоту */
+      gap: 10px; /* Ещё меньше отступы между карточками */
+      padding: 10px; /* Добавляем отступы от краёв экрана */
+    }
+  }
+  

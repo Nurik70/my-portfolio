@@ -1,6 +1,6 @@
 /* Footer styles */
 .footer {
-  position: static  ;
+  position: static;
   left: 0;
   bottom: 0;
   width: 100%;
@@ -13,7 +13,7 @@
   font-family: Arial, sans-serif;
   text-align: center;
   flex-direction: column;
-  height: 75px;
+  height: auto; /* Высота будет адаптироваться */
   box-sizing: border-box;
 }
 
@@ -26,7 +26,7 @@
 }
 
 .footer-col p {
-  margin: 3px 0px; /* Убираем лишние отступы у заголовка */
+  margin: 3px 0; /* Убираем лишние отступы у текста */
   font-size: 17px;
 }
 
@@ -35,7 +35,7 @@
   display: flex;
   gap: 10px;
   justify-content: center;
-  margin-top: 3px; /* Уменьшенное расстояние между h4 и иконками */
+  margin-top: 5px; /* Уменьшенное расстояние между текстом и иконками */
 }
 
 .footer-col .social-links a {
@@ -55,11 +55,40 @@
   background-color: #ffffff;
 }
 
-/* Responsive styles */
-@media (max-width: 767px) {
-  .footer-col {
-      width: 100%;
-      margin-bottom: 15px;
+/* Адаптивность для планшетов */
+@media (max-width: 768px) {
+  .footer {
+    padding: 15px;
+  }
+
+  .footer-col p {
+    font-size: 15px; /* Уменьшенный размер текста */
+  }
+
+  .footer-col .social-links a {
+    height: 25px; /* Уменьшаем размер иконок */
+    width: 25px;
+    line-height: 25px;
   }
 }
 
+/* Адаптивность для телефонов */
+@media (max-width: 480px) {
+  .footer {
+    padding: 10px;
+  }
+
+  .footer-col p {
+    font-size: 14px; /* Ещё меньший размер текста */
+  }
+
+  .footer-col .social-links a {
+    height: 20px; /* Ещё меньший размер иконок */
+    width: 20px;
+    line-height: 20px;
+  }
+
+  .footer-col .social-links {
+    gap: 8px; /* Уменьшаем расстояние между иконками */
+  }
+}

@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { useContext, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { LanguageContext } from '../LanguageContext';
 import '../Styles/Navbar.css';
@@ -6,6 +6,7 @@ import myPhoto from '../images/my-foto-home.jpg';
 
 const Navbar = () => {
   const { language, toggleLanguage } = useContext(LanguageContext);
+  const [menuOpen, setMenuOpen] = useState(false);
 
   // Тексты для обоих языков
   const texts = {
@@ -29,19 +30,29 @@ const Navbar = () => {
     },
   };
 
+  const toggleMenu = () => {
+    setMenuOpen(!menuOpen);
+  };
+
   return (
     <nav>
       <div className="photo-and-portfolio">
         <img src={myPhoto} className="img-my-foto-nav" alt="Temirbekov Nurzhigit" />
         <h1>{texts[language].portfolio}</h1>
       </div>
-      <div className="nav-links">
-        <Link to="/">{texts[language].home}</Link>
-        <Link to="/about">{texts[language].about}</Link>
-        <Link to="/projects">{texts[language].projects}</Link>
-        <Link to="/achivement">{texts[language].achievement}</Link>
-        <Link to="/contacts">{texts[language].contacts}</Link>
+
+      <div className={`nav-links ${menuOpen ? 'open' : ''}`}>
+        <Link to="/" onClick={() => setMenuOpen(false)}>{texts[language].home}</Link>
+        <Link to="/about" onClick={() => setMenuOpen(false)}>{texts[language].about}</Link>
+        <Link to="/projects" onClick={() => setMenuOpen(false)}>{texts[language].projects}</Link>
+        <Link to="/achivement" onClick={() => setMenuOpen(false)}>{texts[language].achievement}</Link>
+        <Link to="/contacts" onClick={() => setMenuOpen(false)}>{texts[language].contacts}</Link>
       </div>
+
+      <button className="menu-toggle" onClick={toggleMenu}>
+        {menuOpen ? 'Close Menu' : 'Open Menu'}
+      </button>
+
       <button className="language-toggle" onClick={toggleLanguage}>
         {texts[language].toggleLanguage}
       </button>
